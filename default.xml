@@ -12,6 +12,12 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
            
+  <remote name="gkd"
+          fetch="https://github.com/GiggleKatDevs" />
+          
+  <remote name="gk"
+          fetch="https://github.com/GiggleKat" />
+           
   <remote name="cm"
           fetch="https://github.com/CyanogenMod/" />
 
@@ -50,11 +56,11 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="build" name="TeamBliss/platform_build" revision="kk4.4" >
+  <project path="build" name="giggle_build" remote="gk" revision="kk4.4" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="android" name="TeamBliss/android" revision="kk4.4" />
+  <project path="android" name="giggle_manifest" remote="gk" revision="kk4.4" />
   
   <!--AOSP repos-->
   <project path="cts" name="platform/cts" remote="aosp" revision="refs/tags/android-4.4.4_r2" groups="cts" />
@@ -401,7 +407,7 @@
   <project path="art" name="TeamBliss/android_art" revision="kk4.4" />
   <project path="bionic" name="TeamBliss/android_bionic" revision="kk4.4" />
   <project path="frameworks/av" name="TeamBliss/android_frameworks_av" revision="kk4.4" />
-  <project path="frameworks/base" name="TeamBliss/android_frameworks_base" revision="kk4.4" />
+  <project path="frameworks/base" name="giggle_base" remote="gk" revision="kk4.4" />
   <project path="frameworks/native" name="TeamBliss/frameworks_native" revision="kk4.4" />
   <project path="frameworks/opt/cards" name="frameworks_opt_cards" remote="sr" revision="kk4.4" />
   <project path="frameworks/opt/datetimepicker" name="frameworks_opt_datetimepicker" remote="sr" revision="kk4.4" />
@@ -428,7 +434,7 @@
   <project path="packages/apps/OmniSwitch" name="TeamBliss/android_packages_apps_OmniSwitch" revision="kk4.4" />  
   <project path="packages/apps/PackageInstaller" name="TeamBliss/android_packages_apps_PackageInstaller" revision="kk4.4" />       
   <project path="packages/apps/PhoneCommon" name="TeamBliss/android_packages_apps_PhoneCommon" revision="kk4.4" />
-  <project path="packages/apps/Settings" name="TeamBliss/android_packages_apps_Settings" revision="kk4.4" /> 
+  <project path="packages/apps/Settings" name="giggle_settings" remote="gk" revision="kk4.4" /> 
   <project path="packages/apps/Stk" name="TeamBliss/android_packages_apps_Stk" revision="kk4.4" /> 
   <project path="packages/apps/UnifiedEmail" name="TeamBliss/android_packages_apps_UnifiedEmail" revision="kk4.4" />
   <project path="packages/apps/Torch" name="TeamBliss/android_packages_apps_Torch" revision="kk4.4" />  
@@ -438,7 +444,7 @@
   <project path="packages/providers/MediaProvider" name="TeamBliss/packages_providers_MediaProvider" revision="kk4.4" />  
   <project path="packages/providers/TelephonyProvider" name="TeamBliss/android_packages_providers_TelephonyProvider" revision="kk4.4" />
   <project path="packages/services/Telephony" name="TeamBliss/android_packages_services_Telephony" revision="kk4.4" />  
-  <project path="vendor/bliss" name="TeamBliss/proprietary_vendor_bliss" revision="kk4.4" />
+  <project path="vendor/gigglekat" name="giggle_vendor" remote="gk" revision="kk4.4" />
     
   <!--Frameworks-->
   <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" groups="pdk" />
@@ -550,9 +556,75 @@
   <project path="vendor/motorola" name="TheMuppets/proprietary_vendor_motorola" remote="github" revision="cm-11.0" />
   <project path="vendor/sony" name="TheMuppets/proprietary_vendor_sony" remote="github" revision="cm-11.0" />
   <project path="vendor/samsung/i9082" name="TeamBliss/android_vendor_samsung_i9082" remote="github" revision="kk4.4" />
+  <project name="vendor_lge_g2" path="vendor/lge/g2" remote="lsd" revision="kitkat" />
 
   <!--NEW THEME CHOOSER-->
   <project path="packages/apps/ThemeChooser" name="CyanogenMod/android_packages_apps_ThemeChooser" revision="cm-11.0" />
   <project path="packages/providers/ThemesProvider" name="CyanogenMod/android_packages_providers_ThemesProvider" revision="cm-11.0" />
+ 
+ <!-- Device Repos -->
+
+<!-- Trees -->
+<!-- LGE -->
+  <project name="giggle_vs980" path="device/lge/vs980" remote="gkd" revision="kitkat" />
+  <project name="giggle_hammerhead" path="device/lge/hammerhead" remote="gkd" revision="kitkat" />
+  <project name="giggle_d802" path="device/lge/d802" remote="gkd" revision="kitkat" />
+  <project name="giggle_d801" path="device/lge/d801" remote="gkd" revision="kitkat" />
+  <project name="giggle_d800" path="device/lge/d800" remote="gkd" revision="kitkat" />  
+  <project name="giggle_d803" path="device/lge/d803" remote="gkd" revision="kitkat" />
+  <project name="giggle_ls980" path="device/lge/ls980" remote="gkd" revision="kitkat" />
+<!-- Motorola -->
+  <project name="giggle_moto_msm8960-kkbl" path="device/motorola/moto_msm8960" remote="gkd" revision="kitkat" />
+  <project name="giggle_ghost" path="device/motorola/ghost" remote="gkd" revision="kitkat" />
+  <project name="giggle_falcon" path="device/motorola/falcon" remote="gkd" revision="kitkat" />
+<!-- SONY -->
+  <project name="giggle_yuga" path="device/sony/yuga" remote="gkd" revision="kitkat" />
+<!-- Samsung -->
+<project name="giggle_n7000" path="device/samsung/n7000" remote="gkd" revision="kitkat" />
+<project name="giggle_jflte" path="device/samsung/jflte" remote="gkd" revision="kitkat" />
+<project name="giggle_lt01wifi" path="device/samsung/lt01wifi" remote="gkd" revision="kitkat" />
+<project name="giggle_p3110" path="device/samsung/p3110" remote="gkd" revision="kitkat" />
+<project name="android_device_samsung_lt013g" path="device/samsung/lt013g" remote="lsd" revision="kitkat" />
+<project name="android_device_samsung_p3100" path="device/samsung/p3100" remote="lsd" revision="kitkat" />
+
+<!-- Kernels -->
+<!-- LGE-->
+  <project name="kernel_lge_msm8974" path="kernel/lge/msm8974" remote="lsd" revision="kitkat" />
+  <project name="android_kernel_lge_hammerhead" path="kernel/lge/hammerhead" remote="cm" revision="cm-11.0" />
+<!-- Motorola -->
+  <project name="cj360/kernel_motorola_msm8960dt-common" path="kernel/motorola/msm8960dt-common" remote="gh" revision="kitkat"  />
+  <!--<project name="android_kernel_motorola_ghost" path="kernel/motorola/ghost" remote="cm" revision="cm-11.0" />-->
+  <project name="DJLaMontagneIII/android_kernel_motorola_ghost" path="kernel/motorola/ghost" remote="gh" revision="DJL11" />
+  <project name="android_kernel_motorola_msm8226" path="kernel/motorola/msm8226" remote="lsd" revision="kitkat" />
+<!-- SONY -->
+  <project name="android_kernel_sony_apq8064" path="kernel/sony/apq8064" remote="du" revision="du44" />
+<!--Samsung-->
+  <project name="android_kernel_samsung_smdk4412" path="kernel/samsung/smdk4412" remote="cm" revision="cm-11.0" />
+  <project name="android_kernel_samsung_jf" path="kernel/samsung/jf" remote="cm" revision="cm-11.0" />
+  <project name="kumajaya/android_kernel_samsung_smdk4x12" path="kernel/samsung/smdk4x12" remote="gh" revision="cm-11.0" />
+  <project name="kernel_samsung_espresso10" path="kernel/samsung/espresso10" remote="sr" revision="kk4.4" />
   
+
+<!-- Commons -->
+<!-- LGE -->
+  <project name="device_lge_g2-common" path="device/lge/g2-common" remote="lsd" revision="kitkat" />
+  <project name="android_device_qcom_common" path="device/qcom/common" remote="cm" revision="cm-11.0" />
+  <project name="hardware_qcom_display-g2" path="hardware/qcom/display-g2" remote="lsd" revision="kitkat" />
+  <project name="android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf" remote="ls" revision="kitkat" />
+  <project name="android_hardware_qcom_media-caf" path="hardware/qcom/media-caf" remote="ls" revision="kitkat" />
+<!-- Motorola -->
+ <project name="android_device_motorola_qcom-common" path="device/motorola/qcom-common" remote="cm" revision="cm-11.0" />
+ <project name="android_device_motorola_msm8226-common" path="device/motorola/msm8226-common" remote="lsd" revision="kitkat" />
+ <project name="CyanogenMod/android_hardware_qcom_fm" path="hardware/qcom/fm" remote="gh" revision="cm-11.0" />
+ <project name="android_hardware_qcom_display-caf-new" path="hardware/qcom/display-caf-new" remote="cm" revision="cm-11.0" />
+<!-- SONY -->
+  <project name="android_device_sony_fusion3-common" path="device/sony/fusion3-common" remote="du" revision="du44" />
+  <project name="android_device_sony_common" path="device/sony/common" remote="du" revision="du44" />
+  <project name="android_device_sony_qcom-common" path="device/sony/qcom-common" remote="du" revision="du44" />
+<!-- Samsung -->
+  <project name="android_device_samsung_galaxys2-common" path="device/samsung/galaxys2-common" remote="cm" revision="cm-11.0" />
+  <project name="android_device_samsung_jf-common" path="device/samsung/jf-common" remote="cm" revision="cm-11.0" />
+  <project name="android_device_samsung_smdk4412-common" path="device/samsung/smdk4412-common" remote="cm" revision="cm-11.0" />
+  <project name="android_device_samsung_lt01-common" path="device/samsung/lt01-common" remote="lsd" revision="kitkat" />
+  <project name="device_samsung_omap4-common" path="device/samsung/omap4-common" remote="sr" revision="kk4.4" /> 
 </manifest>
