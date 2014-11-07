@@ -404,7 +404,7 @@
   <!--TeamBliss repos-->
 
   <project path="external/skia" name="TeamBliss/android_external_skia" revision="kk4.4" /> 
-  <project path="external/stagefright-plugins" name="TeamBliss/android_external_stagefright-plugins" revision="kk4.4" />  
+  <project path="external/stagefright-plugins" name="CyanogenMod/android_external_stagefright-plugins" revision="cm-11.0" />  
   <project path="system/core" name="TeamBliss/platform_system_core" revision="kk4.4" />
   <project path="system/media" name="TeamBliss/system_media" revision="kk4.4" />  
   <project path="art" name="TeamBliss/android_art" revision="kk4.4" />
@@ -420,9 +420,9 @@
   <!--<project path="packages/apps/BlissPapers" name="TeamBliss/android_packages_apps_BlissPapers" revision="kk4.4" /> -->
 <!--  <project path="packages/apps/BlissUpdater" name="TeamBliss/android_packages_apps_BlissUpdater" revision="kk4.4" /> -->
   <project path="packages/apps/Bluetooth" name="TeamBliss/android_packages_apps_Bluetooth" revision="kk4.4" />
-  <project path="packages/apps/Calculator" name="packages_apps_Calculator" remote="sr" revision="kk4.4" />
+  <project path="packages/apps/Calculator" name="TeamBLiss/android_packages_apps_Calculator" revision="kk4.4" />
   <project path="packages/apps/Calendar" name="packages_apps_Calendar" remote="sr" revision="kk4.4" />
-  <project path="packages/apps/Camera2" name="CyanogenMod/android_packages_apps_Camera2" revision="cm-11.0" />
+  <project path="packages/apps/Camera2" name="TeamBliss/android_packages_apps_Camera2" revision="kk4.4" />
   <project path="packages/apps/CellBroadcastReceiver" name="TeamBliss/android_packages_apps_CellBroadcastReceiver" revision="kk4.4" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="sr" revision="kk4.4" />
   <project path="packages/apps/ContactsCommon" name="packages_apps_ContactsCommon" remote="sr" revision="kk4.4" />
@@ -440,7 +440,7 @@
   <project path="packages/apps/Settings" name="giggle_settings" remote="gk" revision="kk4.4" /> 
   <project path="packages/apps/Stk" name="TeamBliss/android_packages_apps_Stk" revision="kk4.4" /> 
   <project path="packages/apps/UnifiedEmail" name="TeamBliss/android_packages_apps_UnifiedEmail" revision="kk4.4" />
-  <project path="packages/apps/Torch" name="TeamBliss/android_packages_apps_Torch" revision="kk4.4" />  
+  <project path="packages/apps/Torch" name="packages_apps_Torch" remote="sr" revision="kk4.4" />  
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="sr" revision="kk4.4" />  
   <project path="packages/providers/ContactsProvider" name="TeamBliss/android_packages_providers_ContactsProvider" revision="kk4.4" />
   <project path="packages/providers/DownloadProvider" name="TeamBliss/android_packages_providers_DownloadProvider" revision="kk4.4" />
@@ -484,7 +484,7 @@
   <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" groups="pdk" revision="cm-11.0" />
   <project path="hardware/libhardware_legacy" name="TeamBliss/android_hardware_libhardware_legacy" revision="kk4.4" />
   <project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom" revision="cm-11.0" />
-  <project path="hardware/qcom/audio-caf" name="CyanogenMod/android_hardware_qcom_audio-caf" groups="caf" revision="cm-11.0" />
+  <project path="hardware/qcom/audio-caf" name="TeamBliss/android_hardware_qcom_audio-caf" groups="caf" revision="kk4.4" />
   <project path="hardware/qcom/bt" name="CyanogenMod/android_hardware_qcom_bt" groups="qcom" revision="cm-11.0" />
   <project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" groups="qcom" revision="cm-11.0" />
   <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" groups="qcom" revision="cm-11.0" />
